@@ -298,6 +298,7 @@ details summary:focus {
     border-radius: 0;
     opacity: 0.7;
     text-align: center;
+    min-width: none;
   }
 
   h1 {

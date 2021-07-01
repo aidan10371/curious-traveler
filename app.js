@@ -11,6 +11,7 @@ const bgImg = $("<img width='100%' id='bg-img' src='./imgs/1.jpg'>");
 const viewportHeight = window.innerHeight;
 if (viewportHeight < 400) {
   bgImg.attr("height", "400px");
+  alert("Tip: turn your phone to landscape position for a better experience");
 } else {
   bgImg.attr("height", viewportHeight);
 }
