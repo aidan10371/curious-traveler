@@ -265,11 +265,6 @@ details summary:focus {
     border-radius: 3px;
   }
 
-  div.mobilespacer {
-    width: 5px;
-    display: inline-block;
-  }
-
   #mapid {
     margin: 0px 15px 15px 15px;
   }
