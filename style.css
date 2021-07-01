@@ -94,7 +94,7 @@ i {
   padding-right: 5px;
 }
 
-#notice p {
+.notice p {
   font-family: "Hind Siliguri", sans-serif;
   font-size: 15px;
   display: inline-block;
