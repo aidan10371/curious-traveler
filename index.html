@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TravelGame Version Alpha</title>
+    <!-- Leaflet CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+      integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+      crossorigin=""
+    />
+    <!-- FA -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <!-- Leaflet JS -->
+    <script
+      src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+      integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+      crossorigin=""
+    ></script>
+    <!-- jQuery -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <!-- Stylesheet -->
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+  </head>
+
+  <body>
+    <div class="form-cont">
+      <div class="bg-img-cont"></div>
+      <form>
+        <h1>The Curious Traveler</h1>
+        <input
+          name="start"
+          id="start"
+          placeholder="Enter your Starting Location"
+        />
+        <input
+          name="destination"
+          id="destination"
+          placeholder="Enter your Ending Location"
+        />
+        <div id="notice"></div>
+        <input
+          name="submit"
+          id="submit"
+          type="submit"
+          value="See Me on the Map"
+          disabled="disabled"
+        />
+      </form>
+      <div class="attribution">Photo by <a href="https://unsplash.com/@harlynkingm?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Max Harlynking</a> on <a href="https://unsplash.com/s/photos/hot-air-balloon?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+      </div>
+    </div>
+    <div class="loading-cont" style="display: none;">
+      <div class="ajax-loader"></div>
+    </div>
+    <div class="error-cont" style="display: none;">
+      <div class="error-msg"></div>
+    </div>
+    <div class="response-cont" style="display: none;">
+      <ul class="response-header">
+        <div class="mobilespacer"></div>
+        <li><a href="#mapid">Map</a></li>
+        <li><a href="#place-info">Current Location Info</a></li>
+        <li><button id="newPlaceInfo">Refresh Location Info</button></li>
+      </ul>
+      <div id="mapid"></div>
+      <div id="place-info" class="place-info"></div>
+      <details><summary>Important Use Notice</summary>Location data will never be 100% accurate. Your start/end location is merely a guess based on what you entered, and the line between the two points is simply an estimated straight path. Do not be alarmed if you are far from this path, especially if you are flying, as planes may go in a dramatically curved path because of the Earth's curvature. All Place Images are found using Bing Image Search API, and can include results from almost any site, meaning the results may not be accurate or appropriate. Although the images are filtered to not include top premium stock photo sites, there is a good chance the images may be copyrighted in some way, therefore they always receive attribution and may NEVER be copied, redistributed, ect.</details>
+    </div>
+    <!-- Functionality JS -->
+    <script src="./app.js"></script>
+  </body>
+</html>

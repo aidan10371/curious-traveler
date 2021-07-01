@@ -1,0 +1,322 @@
+@import url("https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300&family=Lobster+Two&family=Poiret+One&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#mapid {
+  background-color: darkgreen;
+}
+
+#bg-img {
+  object-fit: cover;
+}
+
+form {
+  width: 35%;
+  height: fit-content;
+  min-width: 400px;
+  min-height: 400px;
+  position: absolute;
+  top: 10%;
+  right: 8%;
+  background-color: white;
+  border-radius: 8px;
+  opacity: 0.9;
+  text-align: center;
+  padding: 20px;
+}
+
+h1 {
+  font-family: "Lobster Two", cursive;
+  font-size: 40px;
+  padding-top: 15px;
+  padding-bottom: 25px;
+}
+
+input {
+  padding: 15px;
+  font-family: "Poiret One", cursive;
+  display: block;
+  width: 70%;
+  border-radius: 50px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: black;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 17px;
+  text-align: center;
+}
+
+input::placeholder {
+  color: rgb(49, 46, 46);
+}
+
+input:focus {
+  outline: none;
+}
+
+input#submit {
+  background-color: rgb(65, 141, 255);
+  border-color: rgb(65, 141, 255);
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: "Hind Siliguri", sans-serif;
+  font-size: 20px;
+  margin-top: 30px;
+  transition: all 300ms;
+}
+
+:disabled {
+  cursor: not-allowed !important;
+  opacity: 0.7;
+}
+
+input.submit:hover {
+  background-color: rgb(93, 158, 255);
+  border-color: rgb(93, 158, 255);
+  transform: translateY(-5px);
+  box-shadow: 0px 4px 10px 1px rgb(221, 221, 221);
+}
+
+.notice {
+  margin-top: 30px;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+i {
+  display: inline-block;
+  padding-right: 5px;
+}
+
+#notice p {
+  font-family: "Hind Siliguri", sans-serif;
+  font-size: 15px;
+  display: inline-block;
+}
+
+.loading-cont {
+  width: 100%;
+}
+
+.ajax-loader {
+  position: relative;
+  top: 45%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 50px;
+  border: 10px solid #f3f3f3;
+  border-top: 10px solid rgb(93, 158, 255);
+  animation: spinLoader 1s linear infinite;
+  border-radius: 50%;
+}
+
+@keyframes spinLoader {
+  0% {
+    transform: rotate(0deg);
+  }
+  20% {
+    transform: rotate(40deg);
+  }
+  80% {
+    transform: rotate(320deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.error-cont {
+  background-color: rgb(233, 112, 112);
+  width: 100%;
+}
+
+.error-msg {
+  position: relative;
+  top: 45%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: fit-content;
+  font-family: "Hind Siliguri", sans-serif;
+  font-size: 20px;
+  text-align: center;
+}
+
+ul.response-header {
+  background-color: rgb(93, 158, 255);
+  width: 100%;
+  height: fit-content;
+}
+
+li {
+  text-align: left;
+  display: inline-block;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  margin-left: 25px;
+}
+
+li a,
+li button {
+  font-family: "Hind Siliguri", sans-serif;
+  font-size: 20px;
+  text-decoration: none;
+  padding: 10px 20px 10px 20px;
+  background-color: white;
+  border-radius: 5px;
+  color: black;
+  border: none;
+}
+
+a,
+button {
+  cursor: pointer;
+}
+
+.place-info div p {
+  font-family: "Hind Siliguri", sans-serif;
+  font-size: 27px;
+  letter-spacing: 1px;
+  text-align: center;
+  padding: 20px;
+}
+
+.place-info {
+  background-color: white;
+}
+
+.attr-cont {
+  width: 100%;
+}
+
+.attribution {
+  background-color: rgba(255, 255, 255, 0.7);
+  width: fit-content;
+  height: fit-content;
+  padding: 2px 5px 0px 5px;
+  position: relative;
+  top: -25px;
+  font-family: "Hind Siliguri", sans-serif;
+  font-size: 12px;
+  transition: all 300ms;
+  margin-bottom: -25px; /* To account for white space left behind */
+}
+
+.attribution a {
+  color: #0078a8;
+  text-decoration: none;
+}
+
+.attribution a:hover {
+  text-decoration: underline;
+}
+
+details {
+    font-family: "Hind Siliguri", sans-serif;
+    font-size: 15px;
+    padding: 20px;
+    background-color: white;
+}
+
+details:focus, details summary:focus {
+    outline: none;
+}
+
+/* Mobile Mods */
+@media only screen and (max-width: 900px) and (min-width: 600px) {
+  form {
+    width: 70%;
+    left: 15%;
+    right: 15%;
+    padding: 0px;
+    padding-top: 25px;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  ul.response-header {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  li {
+    margin-left: 15px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+  }
+
+  li a,
+  li button {
+    font-size: 15px;
+    padding: 5px 12px 5px 12px;
+    border-radius: 3px;
+  }
+
+  div.mobilespacer {
+    width: 5px;
+    display: inline-block;
+  }
+
+  #mapid {
+    margin: 0px 15px 15px 15px;
+  }
+
+  .response-cont {
+    background-color: rgb(93, 158, 255);
+  }
+
+  .place-info div p {
+    font-size: 17px;
+    padding: 14px;
+  }
+
+  .attribution {
+    font-size: 11px;
+    top: -24px;
+    margin-bottom: -24px; /* To account for white space left behind */
+  }
+
+  details {
+      padding: 15px;
+      font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  form {
+    width: 100%;
+    top: 0px;
+    right: 0px;
+    padding: 0px;
+    border-radius: 0;
+    opacity: 0.7;
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 26px;
+    margin-bottom: 0px;
+    padding-bottom: 15px;
+    margin-top: 10px;
+  }
+
+  input {
+    font-size: 15px;
+    margin-top: 10px;
+    width: 80%;
+    border-width: 2px;
+  }
+
+  input#submit {
+    font-size: 17px;
+    margin-top: 15px;
+    padding: 10px 20px 10px 20px;
+    width: fit-content;
+  }
+}
