@@ -9,10 +9,13 @@ const responseScreen = $(".response-cont");
 // Some Styling
 const bgImg = $("<img width='100%' id='bg-img' src='./imgs/1.jpg'>");
 const viewportHeight = window.innerHeight;
-if (viewportHeight < 400) {
-  bgImg.attr("height", "400px");
+const viewportWidth = window.innerWidth;
+if (viewportWidth < 500) {
   const landscapeNotice = $("<div class='notice'><p>Tip: Turn your phone to landscape for a much better experience</p></div>");
   $("#form").append(landscapeNotice);
+}
+if (viewportHeight < 400) {
+  bgImg.attr("height", "400px");
 } else {
   bgImg.attr("height", viewportHeight);
 }
