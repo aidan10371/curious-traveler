@@ -1,6 +1,6 @@
 // Styling JS
 // Main Elements
-const formScreen = $(".form-cont");
+const formScreen = $(".form-cont"); 
 const loadScreen = $(".loading-cont");
 const errorScreen = $(".error-cont");
 const errorMessage = $(".error-msg");

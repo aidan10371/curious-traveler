@@ -218,14 +218,15 @@ button {
 }
 
 details {
-    font-family: "Hind Siliguri", sans-serif;
-    font-size: 15px;
-    padding: 20px;
-    background-color: white;
+  font-family: "Hind Siliguri", sans-serif;
+  font-size: 15px;
+  padding: 20px;
+  background-color: white;
 }
 
-details:focus, details summary:focus {
-    outline: none;
+details:focus,
+details summary:focus {
+  outline: none;
 }
 
 /* Mobile Mods */
@@ -283,8 +284,8 @@ details:focus, details summary:focus {
   }
 
   details {
-      padding: 15px;
-      font-size: 14px;
+    padding: 15px;
+    font-size: 14px;
   }
 }
 
