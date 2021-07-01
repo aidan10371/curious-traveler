@@ -198,17 +198,29 @@ button {
   top: -25px;
   font-family: "Hind Siliguri", sans-serif;
   font-size: 12px;
-  transition: all 300ms;
   margin-bottom: -25px; /* To account for white space left behind */
 }
 
-.attribution a {
+.attribution a, .fixed-attr a {
   color: #0078a8;
   text-decoration: none;
 }
 
-.attribution a:hover {
+.attribution a:hover, .fixed-attr a:hover {
   text-decoration: underline;
+}
+
+.fixed-attr {
+  background-color: rgba(255, 255, 255, 0.7);
+  width: fit-content;
+  height: fit-content;
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  margin-bottom: 0px;
+  font-family: "Hind Siliguri", sans-serif;
+  padding: 2px 5px 0px 5px;
+  font-size: 12px;
 }
 
 details {
