@@ -11,7 +11,7 @@ const bgImg = $("<img width='100%' id='bg-img' src='./imgs/1.jpg'>");
 const viewportHeight = window.innerHeight;
 const viewportWidth = window.innerWidth;
 if (viewportWidth < 500) {
-  const landscapeNotice = $("<div class='notice'><p>Tip: Turn your phone to landscape for a much better experience</p></div>");
+  const landscapeNotice = $("<div class='notice'><p>Tip: Turn your phone to landscape for a better experience</p></div>");
   $("#form").append(landscapeNotice);
 }
 if (viewportHeight < 400) {
@@ -27,7 +27,7 @@ $("#mapid").css("height", viewportHeight * 0.75);
 // Screen Functionality
 function screen(
   type,
-  message = "<div>:(</div>We think something went wrong on our end, try again later."
+  message = "<div>:(</div>An error occurred, please try again later."
 ) {
   switch (type) {
     case "loading":
@@ -79,7 +79,7 @@ function checkForm() {
     ) {
       $("#submit").removeAttr("disabled"); // If there is input in both fields make the submit button appear
     } else {
-      $("#submit").attr("disabled", "disabled"); // Always reset to disabeld if false in case user deletes typing
+      $("#submit").attr("disabled", "disabled"); // Always reset to disabled if false in case user deletes typing
     }
   });
 }
@@ -464,6 +464,7 @@ function restrictRefresh() {
   }
 }
 
-/* Statics:
-Place IMG: src="https://www.fortunebuilders.com/wp-content/uploads/2015/03/greenville-downtown-cityscape.jpg"
-*/
+// Footer
+$("#currentYear").text(new Date().getFullYear());
+$("#reportBugWithRef").attr("href", "https://aidandigital.com/report-bug?ref=" + window.location.href);
+$("#reportCopyrightInfringementWithRef").attr("href", "https://aidandigital.com/copyright-infringement?ref=" + window.location.href);

@@ -1,8 +1,12 @@
-@import url("https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300&family=Lobster+Two&family=Poiret+One&display=swap");
+/* Import Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300&family=Lobster+Two&display=swap");
+/* Import AD Icon */
+@import url('https://cdn.aidandigital.com/ad-icon/css/fontello-embedded.css');
 
 * {
   margin: 0;
   padding: 0;
+  font-family: "Hind Siliguri", sans-serif;
 }
 
 #mapid {
@@ -37,7 +41,6 @@ h1 {
 
 input {
   padding: 15px;
-  font-family: "Poiret One", cursive;
   display: block;
   width: 70%;
   border-radius: 50px;
@@ -65,7 +68,6 @@ input#submit {
   cursor: pointer;
   text-transform: uppercase;
   font-weight: bold;
-  font-family: "Hind Siliguri", sans-serif;
   font-size: 20px;
   margin-top: 30px;
   transition: all 300ms;
@@ -89,8 +91,8 @@ i {
 }
 
 .notice p {
-  font-family: "Hind Siliguri", sans-serif;
   font-size: 15px;
+  padding: 0px 10px 10px 10px;
   display: inline-block;
 }
 
@@ -99,10 +101,8 @@ i {
 }
 
 .ajax-loader {
-  position: relative;
-  top: 45%;
-  left: 50%;
-  transform: translateX(-50%);
+  margin: auto;
+  margin-top: 45vh;
   width: 50px;
   height: 50px;
   border: 10px solid #f3f3f3;
@@ -137,7 +137,6 @@ i {
   left: 50%;
   transform: translateX(-50%);
   width: fit-content;
-  font-family: "Hind Siliguri", sans-serif;
   font-size: 20px;
   text-align: center;
 }
@@ -158,7 +157,6 @@ li {
 
 li a,
 li button {
-  font-family: "Hind Siliguri", sans-serif;
   font-size: 20px;
   text-decoration: none;
   padding: 10px 20px 10px 20px;
@@ -174,7 +172,6 @@ button {
 }
 
 .place-info div p {
-  font-family: "Hind Siliguri", sans-serif;
   font-size: 27px;
   letter-spacing: 1px;
   text-align: center;
@@ -190,13 +187,12 @@ button {
 }
 
 .attribution {
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(255, 255, 255, 0.527);
   width: fit-content;
   height: fit-content;
   padding: 2px 5px 0px 5px;
   position: relative;
   top: -25px;
-  font-family: "Hind Siliguri", sans-serif;
   font-size: 12px;
   margin-bottom: -25px; /* To account for white space left behind */
 }
@@ -218,35 +214,21 @@ button {
   bottom: 0px;
   left: 0px;
   margin-bottom: 0px;
-  font-family: "Hind Siliguri", sans-serif;
   padding: 2px 5px 0px 5px;
   font-size: 12px;
 }
 
-details {
-  font-family: "Hind Siliguri", sans-serif;
-  font-size: 15px;
-  padding: 20px;
-  background-color: white;
-}
-
-details:focus,
-details summary:focus {
-  outline: none;
-}
-
-/* Mobile Mods */
-@media only screen and (max-width: 900px) and (min-width: 600px) {
+/* Mobile */
+@media only screen and (max-width: 900px) /*and (min-width: 600px)*/ {
   form {
-    width: 70%;
-    left: 15%;
-    right: 15%;
+    min-width: 0px;
+    width: 96%;
+    left: 2%;
+    right: 2%;
     padding: 0px;
     padding-top: 25px;
   }
-}
 
-@media only screen and (max-width: 900px) {
   ul.response-header {
     padding-top: 10px;
     padding-bottom: 10px;
@@ -281,45 +263,100 @@ details summary:focus {
   .attribution {
     font-size: 11px;
     top: -24px;
-    margin-bottom: -24px; /* To account for white space left behind */
-  }
-
-  details {
-    padding: 15px;
-    font-size: 14px;
+    margin-bottom: -24px;
   }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 350px) {
   form {
+    top: 10px;
+  }
+
+  .fixed-attr {
+    position: static;
     width: 100%;
-    top: 0px;
-    right: 0px;
-    padding: 0px;
-    border-radius: 0;
-    opacity: 0.7;
     text-align: center;
-    min-width: none;
+  }
+}
+
+/* Aidan Digital Footer */
+footer {
+  background-color: rgb(65, 141, 255);
+  color: white;
+  font-size: .85em;
+  font-family: sans-serif;
+  width: 100%;
+  font-size: 14px;
+}
+
+.footer-main {
+  padding: 0px 2%;
+  padding-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-side {
+  padding-top: 30px;
+  padding-bottom: 10px;
+  text-align: center;
+  font-size: 12px;
+}
+
+.footer-side p {
+  display: inline-block;
+}
+
+.footer-main div {
+  display: flex;
+  align-items: center;
+}
+
+.icon-ad {
+  font-size: 30px;
+  margin-right: 10px;
+}
+
+.footer-link {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-pipe {
+  padding: 0px 10px;
+}
+
+@media screen and (max-width: 700px) {
+  .icon-ad {
+    display: none;
   }
 
-  h1 {
-    font-size: 26px;
-    margin-bottom: 0px;
-    padding-bottom: 15px;
-    margin-top: 10px;
+  footer {
+    padding: 8px 0px;
+    font-size: 12px;
   }
 
-  input {
-    font-size: 15px;
-    margin-top: 10px;
-    width: 80%;
-    border-width: 2px;
+  .footer-main {
+    padding: 0px 5%;
+    padding-top: 10px;
+    display: block;
   }
 
-  input#submit {
-    font-size: 17px;
-    margin-top: 15px;
-    padding: 10px 20px 10px 20px;
-    width: fit-content;
+  .footer-side {
+    padding: 20px;
+    font-size: 10px;
+  }
+
+  .footer-main-right {
+    padding-top: 10px;
+    display: block;
+  }
+
+  #github-logo {
+    height: 15px;
   }
 }

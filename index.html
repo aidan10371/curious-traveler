@@ -34,6 +34,7 @@
   </head>
 
   <body>
+    <!-- Initial Form -->
     <div class="form-cont">
       <div class="bg-img-cont"></div>
       <form id="form">
@@ -41,12 +42,12 @@
         <input
           name="start"
           id="start"
-          placeholder="Enter your Starting Location"
+          placeholder="Starting Location"
         />
         <input
           name="destination"
           id="destination"
-          placeholder="Enter your Ending Location"
+          placeholder="Destination"
         />
         <div id="notice" class="notice"></div>
         <input
@@ -70,12 +71,15 @@
         >
       </div>
     </div>
+    <!-- Loading Screen -->
     <div class="loading-cont" style="display: none">
       <div class="ajax-loader"></div>
     </div>
+    <!-- Error Screen -->
     <div class="error-cont" style="display: none">
       <div class="error-msg"></div>
     </div>
+    <!-- Map/Info Screen -->
     <div class="response-cont" style="display: none">
       <ul class="response-header">
         <li><a href="#mapid">Map</a></li>
@@ -84,22 +88,33 @@
       </ul>
       <div id="mapid"></div>
       <div id="place-info" class="place-info"></div>
-      <details>
-        <summary>Important Use Notice</summary>
-        Location data will never be 100% accurate. Your start/end location is
-        merely a guess based on what you entered, and the line between the two
-        points is simply an estimated straight path. Do not be alarmed if you
-        are far from this path, especially if you are flying, as planes may go
-        in a dramatically curved path because of the Earth's curvature. All
-        Place Images are found using Bing Image Search API, and can include
-        results from almost any site, meaning the results may not be accurate or
-        appropriate. Although the images are filtered to not include top premium
-        stock photo sites, there is a good chance the images may be copyrighted
-        in some way, therefore they always receive attribution and may NEVER be
-        copied, redistributed, ect.
-      </details>
+      <!-- Footer -->
+      <footer>
+        <div class="footer-main">
+          <div>
+            <span>
+              <a href="https://aidandigital.com" class="footer-link"><icon class="icon-ad"></icon></a>
+            </span>
+            <span>
+              Project by <a href="https://aidandigital.com" class="footer-link" style="text-decoration: underline">Aidan Digital</a>
+              <span class="footer-pipe">|</span>
+              <a class="footer-link footer-menu-item" id="reportBugWithRef" target="_blank">Report a Bug</a>
+            </span>
+          </div>
+          <div class="footer-main-right">
+            <a href="https://github.com/aidandigital/curious-traveler" class="footer-link">
+              <img id="github-logo" height="20" src="https://cdn.aidandigital.com/tech-logos/github-2-white.png" />
+              <span style="padding: 5px; position: relative; bottom: 4px">View Repo</span>
+            </a>
+          </div>
+        </div>
+        <div class="footer-side">
+          <p class="footer-copyright">&copy; Aidan Digital <span id="currentYear"></span>. All rights reserved.</p>
+          <a class="footer-link" id="reportCopyrightInfringementWithRef" target="_blank">Report Copyright Infringement</a>
+        </div>
+      </footer>
     </div>
-    <!-- Functionality JS -->
+    <!-- Functionality JS  -->
     <script src="./app.js"></script>
   </body>
 </html>
