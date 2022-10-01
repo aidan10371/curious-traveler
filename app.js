@@ -64,7 +64,7 @@ function checkGeoStatus() {
     }
     function error() {
       status.html(
-        "<i class='fa fa-times'></i><p>You don't have location services enabled</p><div><p>Enable them for this site to continue</p></div>"
+        "<i class='fa fa-times'></i><p>You don't have location services enabled</p><div><p>Enable them for this site and reload this page.</p></div>"
       );
     }
   }
@@ -116,7 +116,7 @@ function mapMe(event) {
   function error() {
     screen(
       "error",
-      "<div>:(</div><div>You don't have location services enabled</div><div>Enable them for this site to continue</div>"
+      "<div>:(</div><div>An error occurred getting your geolocation.</div><div>Reload this page and try again.</div>"
     );
   }
 }
